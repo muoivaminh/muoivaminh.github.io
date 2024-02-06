@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Nhà của Mụi và Minh</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Nhà của chúng mình</h1>
+    </header> 
+    <div id="story" style="text-align: end;">
+        <center><h2 style="text-decoration-line: underline;">Dành cho em</h2></center>
+        <center><p>
+            Mọi chuyện bắt đầu ở HOLA, nơi mà chúng mình gặp nhau lần đầu tiên... <br>
+            Bọn mình bước vào đời nhau. Em nói, anh lắng nghe. Mọi thứ cho tới vẫn luôn là vậy. <br>
+            Em chớ bao giờ quên điều đó nhé! Mỗi khi em buồn, hãy luôn nhớ rằng em luôn có anh ở bên. <br>
+            Anh có thể khô khan, nhưng anh sẽ không ngừng yêu em, không ngừng cố gắng vì em.
+        </p></center>
+        
+        <p style="padding-right: 20px; margin-right: 300px; margin-bottom: 0;">Hà Nội, 6/2/24</p>
+        <p style="padding-right: 20px; margin-right: 300px;">Thúi yêu của em</p>
+    </div>
+
+    <div class="daycounts">
+        <h2>How long have we been toghether?</h2>
+        <div class="counts">
+            <h1 id="days"></h1>
+            <h1 id="hours"></h1>
+            <h1 id="minutes"></h1>
+            <h1 id="seconds"></h1>
+        </div>
+        <script>
+            setInterval(function() {
+                // Our start date
+                const startDate = new Date("Aug 6, 2023 19:00:00").getTime();
+
+                // Today's date and time
+                var now = new Date().getTime();
+
+                // Get the distance
+                var distance = now - startDate;
+
+                // Calculate for days, hours, minute, seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the results
+                document.getElementById("days").innerHTML = days + " days :";
+                document.getElementById("hours").innerHTML = hours + " hours :";
+                document.getElementById("minutes").innerHTML = minutes + " minutes :";
+                document.getElementById("seconds").innerHTML = seconds + " seconds";
+            }, 1000);
+
+        </script>
+    </div>
+
+    <div>
+        <div id="gallery">
+            <div id="gallery-header">
+                <center><h2 style="text-decoration: underline;">Kỷ niệm</h2></center>
+                <center><em><p>We keep this love in a photograph ...</p></em></center>
+                <center><em><p>We made these memories for ourselves ...</p></em></center>
+            </div>
+            <div class="row" id="imageGrid">
+                <div class="column" id="col1"></div>
+                <div class="column" id="col2"></div>
+                <div class="column" id="col3"></div>
+                <div class="column" id="col4"></div>
+            </div>
+        </div>
+        <script>
+            // Replace these URLs with your image URLs
+            var imageUrls = [
+                'images/hello (1).jpg',
+                'images/hello (2).jpg',
+                'images/hello (3).jpg',
+                'images/hello (4).jpg',
+                'images/hello (5).jpg',
+                'images/hello (6).jpg',
+                'images/hello (7).jpg',
+                'images/hello (8).jpg',
+                'images/hello (9).jpg',
+                'images/hello (10).jpg',
+                'images/hello (11).jpg',
+                'images/love (1).jpg',
+                'images/love (2).jpg',
+                'images/love (3).jpg',
+                'images/love (4).jpg',
+                'images/love (5).jpg',
+                'images/love (6).jpg',
+                'images/love (7).jpg',
+                'images/love (8).jpg',
+                'images/love (9).jpg',
+                'images/love (10).jpg',
+                'images/love (11).jpg',
+                'images/love (12).jpg',
+                'images/love (13).jpg',
+                'images/love (14).jpg',
+                'images/love (15).jpg',
+                'images/love (16).jpg',
+                'images/love (17).jpg',
+                'images/love (18).jpg',
+                'images/love (19).jpg',
+                'images/love (20).jpg',
+                'images/love (21).jpg',
+                'images/love (22).jpg',
+                'images/love (23).jpg',
+                'images/love (24).jpg',
+                'images/love (25).jpg',
+                'images/love (26).jpg',
+                'images/love (27).jpg',
+                'images/love (28).jpg',
+                'images/love (29).jpg',
+                'images/love (30).jpg',
+                'images/love (31).jpg',
+                'images/love (32).jpg',
+                'images/love (33).jpg',
+                'images/love (34).jpg',
+                'images/love (35).jpg',
+                'images/love (36).jpg',
+                'images/love (37).jpg',
+                'images/love (38).jpg',
+                'images/love (39).jpg',
+                'images/love (40).jpg',
+                'images/love (42).jpg',
+                'images/love (43).jpg',
+                'images/love (44).jpg',
+                'images/love (45).jpg',
+                'images/love (46).jpg',
+                'images/love (47).jpg',
+                'images/love (48).jpg',
+                'images/love (49).jpg',
+                'images/love (50).jpg',
+                'images/love (51).jpg',
+                'images/love (52).jpg',
+                'images/love (53).jpg',
+                'images/love (54).jpg',
+                'images/love (55).jpg',
+                'images/love (56).jpg',
+                'images/love (57).jpg',
+                'images/love (58).jpg',
+                // Add more image URLs as needed
+            ];
+
+            const colNum = 17;
+    
+            // Get the image grid container
+            var imageGrid = document.getElementById('imageGrid');
+            for (var i = 0; i < colNum; i++) {
+                var col = document.getElementById('col1');
+                var imageUrl = imageUrls[i];
+                var div = document.createElement('div');
+                var imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                div.appendChild(imgElement);
+                col.appendChild(div);
+            }
+            for (var i = colNum; i < colNum * 2; i++) {
+                var col = document.getElementById('col2');
+                var imageUrl = imageUrls[i];
+                var div = document.createElement('div');
+                var imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                div.appendChild(imgElement);
+                col.appendChild(div);
+            }
+            for (var i = colNum * 2; i < colNum * 3; i++) {
+                var col = document.getElementById('col3');
+                var imageUrl = imageUrls[i];
+                var div = document.createElement('div');
+                var imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                div.appendChild(imgElement);
+                col.appendChild(div);
+            }
+            for (var i = colNum * 3; i < colNum * 4; i++) {
+                var col = document.getElementById('col4');
+                var imageUrl = imageUrls[i];
+                var div = document.createElement('div');
+                var imgElement = document.createElement('img');
+                imgElement.src = imageUrl;
+                div.appendChild(imgElement);
+                col.appendChild(div);
+            }
+        </script>
+    </div>
+</body>
+</html>

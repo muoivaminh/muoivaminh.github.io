@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(255, 229, 202);
+    padding: 0 ;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('images/body.png');
+    opacity: 0.05; /* Set the opacity for the background image */
+    z-index: -1;
+}
+
+header {
+    background-image: url(images/background-image.jpg);
+    background-repeat: no-repeat;
+    padding: 0px;
+    padding-top: 80px;
+    margin: 0px;
+    background-size: cover;
+    background-position: center top;
+    height: 300px;
+}
+
+header h1 {
+    font-family: 'Pacifico';
+    font-size: 400%;
+    width: fit-content;
+    color: #FFE5CA;
+    font-weight: 900;
+    margin: auto;
+}
+
+nav {
+    background-color: #739072;
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    margin: 0px;
+    color: 739072;
+}
+
+nav ul {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 5px 10px 5px 10px;
+}
+
+nav ul li a:link, nav ul li a:visited {
+    color: white;
+    border-bottom: transparent;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li.selected {
+    background-color: #3A4D39;
+}
+
+.daycounts {
+    background-color: #FA9884;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+.daycounts h2 {
+    color: #FDE5D4;
+    font-family: 'Pacifico';
+    font-weight: lighter;
+    text-align: center;
+    font-size: 200%;
+    font-style: italic;
+}
+
+#days, #minutes, #hours, #seconds {
+    color: #FDE5D4;
+    display: inline;
+    font-weight: 900;
+    font-size: 350%;
+    font-family: 'Pacifico';
+    align-self: center;
+}
+.counts {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+  
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 23%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column div {
+    overflow: hidden;
+}
+  
+.column div img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    transition: 0.2s ease;
+}
+
+.row .column img:hover {
+    transform: scale(1.05, 1.05)
+}
+
+#gallery-header {
+    font-family: 'Pacifico';
+    color: #f55f3ad7;
+    opacity: 0.9;
+    font-size: 1.4rem;
+}
+
+#story {
+    font-family: 'Pacifico';
+    font-size: 1.4rem;
+    opacity: 0.7;
+}
